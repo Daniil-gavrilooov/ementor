@@ -1,0 +1,28 @@
+.statistic {
+    padding: 130px 0;
+    text-align: center;
+
+    &__content {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-gap: 30px;
+     grid-template-rows: auto;
+    }
+    
+    &__num {
+        font-weight: 500;
+        font-size: 58px;
+        line-height: 100%;
+        color: $green;
+        font-feature-settings: "pnum" on, "lnum" on;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 120%;
+        max-width: 270px;
+    }
+}
+
+
