@@ -25,41 +25,44 @@
         }
     }
 
+    &__burger-btn {
+        display: none;
+    }
+
     &__content {
         position: relative;
-        &::after{
+        &::after {
             position: absolute;
-            content: '';
+            content: "";
             width: 270px;
             height: 330px;
             top: 0;
-            right: 0;
+            right: 5%;
             background-image: url(../images/header__img\ 2.png);
         }
 
-        &::before{
+        &::before {
             position: absolute;
-            content: '';
+            content: "";
             width: 270px;
             height: 330px;
             bottom: 0;
-            left: 0;
+            left: 5%;
             background-image: url(../images/header__img\ 1.png);
-            
         }
     }
 
     &__social {
         position: absolute;
         content: "";
-        left: 0;
+        left: 5%;
         top: 0;
     }
 
     &__prompt {
         position: absolute;
         content: "";
-        right: -60px;
+        right: 2%;
         bottom: 60px;
         transform: rotate(-90deg);
     }
@@ -71,14 +74,12 @@
         position: relative;
         & span {
             position: absolute;
-            content: '';
+            content: "";
             left: 0;
             top: 0%;
             transform: rotate(90deg);
         }
-       
     }
-
 
     &__social-item {
         margin-bottom: 30px;
@@ -114,5 +115,140 @@
         padding: 20px 47px;
         background: $orange;
         border-radius: 0px 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header {
+        &__content {
+            &::after,
+            &::before {
+                z-index: 1;
+                opacity: 0.1;
+            }
+        }
+        &__info {
+            z-index: 2;
+        }
+
+        &__social {
+            left: 5%;
+        }
+
+        &__prompt {
+            right: 3%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        overflow: hidden;
+        &__top {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__burger-menu {
+            position: absolute;
+            content: "";
+            top: 0%;
+            right: -3%;
+            z-index: 3;
+            background-color: $green;
+            height: 100vh;
+            padding-left: 40%;
+            padding-right: 10%;
+            padding-top: 7%;
+            transform: translateX(100%);
+            transition: $transition;
+            &--active {
+                transition: $transition;
+                transform: translateX(0);
+            }
+        }
+
+        &__menu-list {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__burger-btn {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 3;
+            &::after,
+            &::before,
+            & span {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+            }
+
+            &::after {
+                top: 0%;
+                transition: $transition;
+            }
+
+            &::before {
+                bottom: 0%;
+                transition: $transition;
+            }
+
+            & span {
+                top: 50%;
+            }
+
+            &--active::after {
+                transform: rotate(50deg);
+                top: 50%;
+                transition: $transition;
+            }
+
+            &--active::before {
+                transform: rotate(-50deg);
+                bottom: 45%;
+                transition: $transition;
+            }
+
+            &--active span {
+                transform: scale(0);
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        &__content {
+            &::after,
+            &::before {
+                width: 0;
+            }
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 110%;
+        }
+
+        &__text{
+            margin-bottom: 30px;
+        }
+
+        &__social{
+            top: -15%;
+        }
+
+        &__prompt{
+            bottom: 0;
+            right: -9%;
+        }
     }
 }
