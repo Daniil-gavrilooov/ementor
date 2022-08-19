@@ -1,0 +1,118 @@
+.header {
+    background-color: $green;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    color: $white;
+    &__top {
+        margin-bottom: 64px;
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    &__menu-link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        padding-bottom: 8px;
+        transition: all 0.2s ease;
+        &:hover {
+            border-bottom: 2px dashed $orange;
+        }
+    }
+
+    &__content {
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 270px;
+            height: 330px;
+            top: 0;
+            right: 0;
+            background-image: url(../images/header__img\ 2.png);
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 270px;
+            height: 330px;
+            bottom: 0;
+            left: 0;
+            background-image: url(../images/header__img\ 1.png);
+            
+        }
+    }
+
+    &__social {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+    }
+
+    &__prompt {
+        position: absolute;
+        content: "";
+        right: -60px;
+        bottom: 60px;
+        transform: rotate(-90deg);
+    }
+
+    &__prompt-link {
+        font-size: 14px;
+        line-height: 100%;
+        padding-left: 31px;
+        position: relative;
+        & span {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0%;
+            transform: rotate(90deg);
+        }
+       
+    }
+
+
+    &__social-item {
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 92px;
+        padding-bottom: 112px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 58px;
+        line-height: 120%;
+        max-width: 542px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 381px;
+        margin-bottom: 70px;
+    }
+
+    &__btn {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        padding: 20px 47px;
+        background: $orange;
+        border-radius: 0px 20px;
+    }
+}
