@@ -1,0 +1,45 @@
+.cours {
+    padding: 120px 0;
+    &__head {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 58px;
+        line-height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    &__item {
+        padding: 20px;
+        background: #fdfdfd;
+        box-shadow: 5px 5px 30px rgba(101, 101, 101, 0.12);
+        border-radius: 10px;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        margin-top: 15px;
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        & .section__btn{
+            padding: 20px 74px;
+            background-color: $green;
+        }
+    }
+}
