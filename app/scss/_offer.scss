@@ -23,4 +23,36 @@
     & .section__btn{
         padding: 20px 74px;
     }
+
+    & img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1100px) {
+    .offer{
+        padding: 80px 0;
+        text-align: center;
+        &__inner{
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 70px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .offer{
+        &__title{
+            font-size: 40px;
+            line-height: 105%;
+        }
+
+        &__text{
+            font-size: 11px;
+            line-height: 140%;
+        }
+    }
 }
