@@ -17,6 +17,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 60px;
+        flex-wrap: wrap;
     }
 
     &__item {
@@ -42,4 +43,24 @@
             background-color: $green;
         }
     }
+}
+
+@media (max-width: 1100px) {
+    .cours{
+        &__content{
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .cours{
+        padding: 50px 0;
+        text-align: center;
+        &__title{
+            font-size: 45px;
+        }
+    }
+
+    
 }
