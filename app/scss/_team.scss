@@ -1,0 +1,43 @@
+.team {
+    padding-bottom: 120px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info .section__btn {
+        background-color: $green;
+        color: $white;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 58px;
+        line-height: 100%;
+        font-feature-settings: "pnum" on, "lnum" on;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 500px;
+        & + .team__text {
+            margin-top: 15px;
+            margin-bottom: 70px;
+        }
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+
+    &__item-description {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 130%;
+    }
+}
