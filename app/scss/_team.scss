@@ -41,3 +41,44 @@
         line-height: 130%;
     }
 }
+
+@media (max-width: 1100px) {
+    .team{
+        text-align: center;
+        &__wrapper{
+            flex-direction: column;
+            align-items: center;
+            gap: 70px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .team{
+        padding-bottom: 50px;
+        &__images{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media (max-width: 500px) {
+    .team{
+
+        &__title{
+            font-size: 40px;
+        }
+        &__text{
+            font-size: 12px;
+            line-height: 136%;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .team{
+        &__images{
+            grid-template-columns: 1fr;
+        }
+
+     
+    }
+}
